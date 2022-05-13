@@ -1,7 +1,7 @@
 # bugFixes
 
 
-For libgomp: Thread creation failed: Resource temporarily unavailable
+For libgomp: Thread creation failed: Resource temporarily unavailable (export OMP_NUM_THREADS=1)
 
 https://stackoverflow.com/questions/53351194/openmp-libgomp-thread-creation-failed-resource-temporarily-unavailable-when
 

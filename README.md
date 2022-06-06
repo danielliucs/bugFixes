@@ -16,3 +16,8 @@ For GLIBCXX_3.4.29 not found
 
 https://stackoverflow.com/questions/72205522/glibcxx-3-4-29-not-found
 
+
+
+Tuple index out of range when sampling environment
+
+https://github.com/openai/spinningup/issues/157

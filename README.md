@@ -21,3 +21,7 @@ https://stackoverflow.com/questions/72205522/glibcxx-3-4-29-not-found
 Tuple index out of range when sampling environment
 
 https://github.com/openai/spinningup/issues/157
+
+##
+For the seeds_avg_and_plot_rewards.py file:\
+*To make it support more experiments/tasks/seeds, all you would need to do is change the seeds, experiments, target_files, exp_tasks_names, and file_tasks_names list

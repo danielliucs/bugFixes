@@ -25,3 +25,4 @@ https://github.com/openai/spinningup/issues/157
 ## Python ReadME
 For the seeds_avg_and_plot_rewards.py file:\
 *To make it support more experiments/tasks/seeds, all you would need to do is change the seeds, experiments, target_files, exp_tasks_names, and file_tasks_names list
+*To make it support more experiments, seeds, and tasks all you would need to do is change the number of tasks and the seeds, experiments, and target_files list

@@ -36,7 +36,7 @@ def plot(csv_to_plot, csv_std_min, csv_std_max, file_task_names, exp_task_name, 
             ax1.fill_between(rewards.index, csv_std_max[j].values, csv_std_min[j].values, alpha=0.5)
 
         ax1.set_xlabel("Training round", fontstyle='normal')
-        ax1.set_ylabel(f'Average Rewards for {file_task_names[i]}')
+        ax1.set_ylabel(f'Average reward for {file_task_names[i]}')
         ax1.tick_params(axis='y')
 
         plt.xlim(0, len(csv)-1)

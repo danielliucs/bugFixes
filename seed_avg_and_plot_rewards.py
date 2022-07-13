@@ -18,29 +18,35 @@ def plot(csv_to_plot, csv_std_min, csv_std_max, file_task_names, exp_task_name, 
 
     #Loop through the tasks
     #If there are n tasks & m experiments and nxm columns, # of tasks = nxm//m
+    task_index = 0
     for i in range((len(csv.columns)//(num_experiments))):
         #retrive the column
         rewards = csv[i]
-
+        exp_task_index = 0
         #Axes for the first algorithm
-        ax1 = sns.lineplot(data=rewards, linewidth=2.5, label= exp_task_name[i])
+        ax1 = sns.lineplot(data=rewards, linewidth=2.5, label= exp_task_name[exp_task_index])
         #std deviation
         ax1.fill_between(rewards.index, csv_std_max[i].values, csv_std_min[i].values, alpha=0.5)
+        exp_task_index += 1
        
         #Axes for the next nth algorithm, if more than 2 algorithms, length csv.columns increases
         for j in range(i+num_tasks, len(csv.columns), num_tasks):
             rewards = csv[j]
-            ax1 = sns.lineplot(data=rewards, linewidth=2.5, label= exp_task_name[j])
+            ax1 = sns.lineplot(data=rewards, linewidth=2.5, label= exp_task_name[exp_task_index])
             ax1.fill_between(rewards.index, csv_std_max[j].values, csv_std_min[j].values, alpha=0.5)
 
-        ax1.set_xlabel("Training Round", fontstyle='normal')
-        ax1.set_ylabel("Average Reward")
+        ax1.set_xlabel("Training round", fontstyle='normal')
+        ax1.set_ylabel(f'Average Rewards for {file_task_names[i]}')
         ax1.tick_params(axis='y')
 
         plt.xlim(0, len(csv)-1)
 
+        pdf_name = file_task_names[i]
+        if " " in pdf_name:
+            pdf_name = pdf_name.replace(" ", "")
+
         #save each task in their own file
-        f.savefig(f'{file_task_names[i]}.pdf', bbox_inches='tight')
+        f.savefig(f'{pdf_name}.pdf', bbox_inches='tight')
 
         #We clear the axis so that it doesn't superimpose tasks 2 & tasks3 on top of tasks1
         ax1.clear()
@@ -111,6 +117,9 @@ def generate_avg(seeds, experiment, target_file, num_columns, num_tasks):
 if __name__ == '__main__':
     seeds = [5,10,15]
     
+    """To make it suppoValueError: Wrong number of items passed 3, placement implies 1rt more experiments/tasks/seeds, all you would need to do is 
+    change the seeds, experiments, target_files, exp_tasks_names, and file_tasks_names list"""
+
     """make sure at index i, experiments[i] matches up with the target_files[i] and exp_task_names[i+j]
     where j is the index of the file_task_names list and it increments by 1 through the list until 
     len(file_task_names)"""
@@ -121,8 +130,9 @@ if __name__ == '__main__':
 
     experiments = ["A2C_RL_SERVER_PERCENTILE_AGGREGATE", "A2C_RL_SERVER_FED_AVG"]
     target_files = ["AVG_OF_FISHER_EXPERIMENTS.csv", "AVG_OF_FEDAVG_EXPERIMENTS.csv"]
-    exp_task_names = ["fisher_task_1", "fisher_task_2", "fisher_task_3", "fedavg_task_1", "fedavg_task_2", "fedavg_task_3"]
-    file_task_names = ["task1", "task2", "task3"]
+   # exp_task_names = ["fisher_task_1", "fisher_task_2", "fisher_task_3", "fedavg_task_1", "fedavg_task_2", "fedavg_task_3"]
+    exp_task_names = ["Preset curriculum", "FedAvg"]
+    file_task_names = ["task 1", "task 2", "task 3"]
     
     num_columns = len(file_task_names) * len(seeds)
    

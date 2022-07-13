@@ -22,8 +22,8 @@ def plot(csv_to_plot, csv_std_min, csv_std_max, exp_names, save_file):
         ax1 = sns.lineplot(data=rewards, linewidth=2.5, label= exp_names[i])
         ax1.fill_between(rewards.index, csv_std_max[i].values, csv_std_min[i].values, alpha=0.5)
 
-    ax1.set_xlabel("Training Round", fontstyle='normal')
-    ax1.set_ylabel("Culmunative Average Reward")
+    ax1.set_xlabel("Training round", fontstyle='normal')
+    ax1.set_ylabel("Cumulative average reward")
     ax1.tick_params(axis='y')
 
     plt.xlim(0, len(csv)-1)
@@ -95,9 +95,12 @@ if __name__ == '__main__':
     target_files at index 0 (both fisher). Make sure exp_names list matches too (at index 0 it is 
     also fisher)."""
 
+    """To make it support more experiments, seeds, and tasks all you would need to do is change the
+    number of tasks and the seeds, experiments, and target_files list"""
+
     experiments = ["A2C_RL_SERVER_PERCENTILE_AGGREGATE", "A2C_RL_SERVER_FED_AVG"]
     target_files = ["FISHER_CULSUM_AVG", "FEDAVG_CULSUM_AVG"]
-    exp_names = ["fisher", "fedavg"]
+    exp_names = ["Preset curriculum", "FedAvg"]
 
     #number of columns for the culmunating sum final csv file
     num_culsum_columns = len(exp_names)

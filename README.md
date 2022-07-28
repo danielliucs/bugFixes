@@ -28,7 +28,7 @@ For the seeds_avg_and_plot_rewards.py file:\
 * To make it support more experiments, seeds, and tasks all you would need to do is change the number of tasks and the seeds, experiments, and target_files list
 
 
-Can't push from vscode and terminal always asking for authentication.
+## Can't push from vscode and terminal always asking for authentication.
 https://stackoverflow.com/questions/60757334/git-push-from-visual-studio-code-no-anonymous-write-access-authentication-fai
 
 Set origin with personal access token and then followed by the repo

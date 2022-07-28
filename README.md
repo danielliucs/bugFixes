@@ -23,7 +23,7 @@ Tuple index out of range when sampling environment
 https://github.com/openai/spinningup/issues/157
 
 ## Python ReadME
-For the seeds_avg_and_plot_rewards.py file:\
+For the seeds_avg_and_plot_rewards.py file:
 * To make it support more experiments/tasks/seeds, all you would need to do is change the seeds, experiments, target_files, exp_tasks_names, and file_tasks_names list
 * To make it support more experiments, seeds, and tasks all you would need to do is change the number of tasks and the seeds, experiments, and target_files list
 
@@ -31,5 +31,5 @@ For the seeds_avg_and_plot_rewards.py file:\
 ## Can't push from vscode and terminal always asking for authentication.
 https://stackoverflow.com/questions/60757334/git-push-from-visual-studio-code-no-anonymous-write-access-authentication-fai
 
-Set origin with personal access token and then followed by the repo /
+Set origin with personal access token and then followed by the repo \
 https://key@github.com/repo.git

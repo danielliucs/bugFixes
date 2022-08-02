@@ -33,3 +33,5 @@ https://stackoverflow.com/questions/60757334/git-push-from-visual-studio-code-no
 
 Set origin with personal access token and then followed by the repo \
 https://key@github.com/repo.git
+
+git remote -v to check your remote

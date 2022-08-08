@@ -32,6 +32,6 @@ For the seeds_avg_and_plot_rewards.py file:
 https://stackoverflow.com/questions/60757334/git-push-from-visual-studio-code-no-anonymous-write-access-authentication-fai
 
 Set origin with personal access token and then followed by the repo \
-https://key@github.com/your_user/repo.git
+https://key@github.com/repo_user/repo.git
 
 git remote -v to check your remote

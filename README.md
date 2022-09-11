@@ -35,3 +35,5 @@ Set origin with personal access token and then followed by the repo \
 https://key@github.com/repo_user/repo.git
 
 git remote -v to check your remote
+
+https://stackoverflow.com/questions/6121094/how-do-i-run-a-program-with-commandline-arguments-using-gdb-within-a-bash-script

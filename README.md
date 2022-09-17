@@ -39,3 +39,4 @@ git remote -v to check your remote
 https://stackoverflow.com/questions/6121094/how-do-i-run-a-program-with-commandline-arguments-using-gdb-within-a-bash-script
 
 valgrind --leak-check=yes test_wc wc-small.txt to run valgrind
+valgrind --track-origins=yes ./test_wc /cad2/ece344f/src/wc-big.txt

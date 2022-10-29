@@ -44,4 +44,5 @@ valgrind --track-origins=yes ./test_wc /cad2/ece344f/src/wc-big.txt
 py -m pip to fuck with pip in windows\
 py -m to run like anything in windows \
 for virtualenv in windows\
-https://stackoverflow.com/questions/18713086/virtualenv-wont-activate-on-windows
+https://stackoverflow.com/questions/18713086/virtualenv-wont-activate-on-windows \
+https://linuxhint.com/activate-virtualenv-windows/

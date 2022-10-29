@@ -40,3 +40,5 @@ https://stackoverflow.com/questions/6121094/how-do-i-run-a-program-with-commandl
 
 valgrind --leak-check=yes test_wc wc-small.txt to run valgrind\
 valgrind --track-origins=yes ./test_wc /cad2/ece344f/src/wc-big.txt
+
+py -m pip to fuck with pip in windows

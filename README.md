@@ -46,3 +46,6 @@ py -m to run like anything in windows \
 for virtualenv in windows\
 https://stackoverflow.com/questions/18713086/virtualenv-wont-activate-on-windows \
 https://linuxhint.com/activate-virtualenv-windows/
+
+# running auto-py-to-exe
+https://stackoverflow.com/questions/67851955/how-to-fix-auto-py-to-exe-is-not-recognized-as-an-internal-or-external-command
